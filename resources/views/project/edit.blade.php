@@ -59,7 +59,33 @@
                 </span>
                 @endif
             </div>
-            
+            @if($project->published == 0)
+            <div class="form-group" data-toggle="buttons">
+                <label class="btn btn-success">
+                    <input type="checkbox" name="published" value="1" id="option2"> ACTIVATE
+                </label>
+                @if ($errors->has('published'))
+                    <span class="help-block">
+                    <strong class="text-danger">
+                    {{ $errors->first('published') }}
+                    </strong>
+                    </span>
+                 @endif
+            </div>
+            @else
+                <div class="form-group" data-toggle="buttons">
+                    <label class="btn btn-danger">
+                        <input type="checkbox" name="published" value="0" id="option2"> DEACTIVATE
+                    </label>
+                    @if ($errors->has('published'))
+                        <span class="help-block">
+                    <strong class="text-danger">
+                    {{ $errors->first('published') }}
+                    </strong>
+                    </span>
+                    @endif
+                </div>
+            @endif
             {{ csrf_field() }}
             
             <input type="hidden" name="_method" value="patch">

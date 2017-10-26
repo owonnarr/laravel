@@ -61,9 +61,6 @@
                 <label class="btn btn-success">
                     <input type="checkbox" name="published" value="1" id="option2"> Published
                 </label>
-                {{--<label class="btn btn-primary">--}}
-                    {{--<input type="checkbox" name="published" value="0" id="option3"> No Published--}}
-                {{--</label>--}}
                 @if ($errors->has('published'))
                     <span class="help-block">
                     <strong class="text-danger">
