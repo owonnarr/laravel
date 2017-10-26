@@ -1,0 +1,26 @@
+.category-img {
+    width: 120px;
+    height: 70px;
+}
+
+.category-home {
+    color: #444;
+    font-size: 20px;
+}
+.image-abouts {
+    height: 100%; !important;
+}
+
+.publish {
+    /*display: block;*/
+    background-color: #80da80;
+    width: 50px;
+    text-align: center;
+}
+
+.nopublish {
+    /*display: block;*/
+    background-color: #ff8683;
+    width: 50px;
+    text-align: center;
+}
