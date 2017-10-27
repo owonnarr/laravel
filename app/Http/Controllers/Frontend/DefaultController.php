@@ -40,8 +40,9 @@ class DefaultController extends Controller
     public function category($category)
     {
         $categories = Category::all();
-        $projects = Project::all();
+        $projects = Project::all()->where('published', 1);
         $abouts = About::all();
+        $teams = Team::all();
         
         $categories = DB::table('categories')
             ->join('projects', 'projects.category_id', '=', 'categories.id')
@@ -52,6 +53,7 @@ class DefaultController extends Controller
         'projectlist' => $projects,
         'categories' => $categories,
         'abouts' => $abouts,
+        'teams' => $teams,
     ]);
         
     }

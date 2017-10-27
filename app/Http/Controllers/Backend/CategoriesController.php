@@ -23,9 +23,11 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $team = Team::all();
 
         return view('dashboard.categories', [
             'categories' => $categories,
+            'team' => $team,
         ]);
     }
 
@@ -37,9 +39,11 @@ class CategoriesController extends Controller
     public function create()
     {
         $categories = Category::all();
+        $team = Team::all();
 
         return view('dashboard.categories.create', [
             'categories' => $categories,
+            'team' => $team,
         ]);
     }
 
