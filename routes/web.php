@@ -6,7 +6,7 @@ use App\Models\About;
 use App\Models\Team;
 use App\Models\Teams_Profile;
 use Illuminate\Support\Facades\DB;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

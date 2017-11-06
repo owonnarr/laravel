@@ -15,7 +15,12 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\Event' => [
             'App\Listeners\EventListener',
+                'App\Listeners\AuthLogListener',
         ],
+    ];
+    
+    protected $subscribe = [
+        'App\Listeners\AuthLogListener', 
     ];
 
     /**
